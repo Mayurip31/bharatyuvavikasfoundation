@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Jost', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Container to center the form */
+        
+        /* Container to center the form */
+        .donation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            padding: 40px 0; /* Padding from top and bottom */
+            background-color: #f9f9f9;
+        }
+
+        section {
+            max-width: 90%;
+            width: 600px;
+            background: #fff;
+            padding: 40px;
+            border-top: 10px solid #ff6600;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex input {
+            border: none;
+            outline: none;
+            padding: 0px 20px;
+            height: 50px;
+            width: 100%;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+        }
+
+        .m10 {
+            margin-top: 10px;
+        }
+
+        .m20 {
+            margin-top: 20px;
+        }
+
+        button {
+            width: 200px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            height: 50px;
+            background: #12431A;
+            color: #fff;
+            padding: 0px 20px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        input:focus {
+            border: 1px solid #28a745;
+        }
+
+        /* Popup styling */
+          /* Popup styling */
+          .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff6600;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+            width: 300px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .popup p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .popup button {
+            background-color: #fff;
+            color: #ff6600;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .popup button:hover {
+            background-color: #12431A;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Yuva Vikas Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js" integrity="sha512-f0VlzJbcEB6KiW8ZVtL+5HWPDyW1+nJEjguZ5IVnSQkvZbwBt2RfCBY0CBO1PsMAqxxrG4Di6TfsCPP3ZRwKpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Top bar with phone number and email -->
+        <div class="contact-info">
+            <span class="phone">📞 Phone: +91 7385169265</span>
+            <span class="email">✉️ Email: byvfofficial@gmail.com</span>
+        </div>
+    
+        <!-- Logo and foundation name -->
+        <div class="logo-section">
+            <img src="Images/logo.png" alt="Logo" class="logo">
+            <p class="slogan">Building Brighter Future</p>
+            <h1 class="foundation-name">BHARAT YUVA VIKAS FOUNDATION</h1>
+        </div>
+    
+        <!-- Navigation bar container -->
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- Hamburger icon for mobile -->
+                </div>
+                <ul id="menu-list">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+    
+                    <!-- Projects Dropdown Menu -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                        <ul class="dropdown-content">
+                            <!-- HTML Links First -->
+                            <li><a href="life-skill.html">Life Skill Program</a></li>
+                            <li><a href="health.html">Health Program</a></li>
+                            <li><a href="education.html">Education Program</a></li>
+    
+                            <!-- PDF Reports Next -->
+                            <li><a href="life-skill.pdf">Life Skill Program Report</a></li>
+                            <li><a href="health.pdf">Health Program Report</a></li>
+                            <li><a href="education.pdf">Education Program Report</a></li>
+                        </ul>
+                    </li>
+    
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="#index.htmlgoals-section">Goals</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Centered donation form container -->
+    <div class="donation-container">
+        <section id="donationSection">
+            <h1>Donation Form</h1>
+            <div class="form">
+                <form id="donationForm" action="/submit-donation" method="POST">
+                    <div class="flex m20">
+                        <label>Full Name*</label>
+                        <input type="text" name="name" placeholder="Full Name" class="m10 name" required>
+                    </div>
+                    <div class="flex m20">
+                        <label>Mobile Number*</label>
+                        <input type="text" name="mobile" placeholder="Mobile Number" class="m10 mobile" required>
+                    </div>
+                    <div class="flex m20">
+                        <label>Email*</label>
+                        <input type="email" name="email" placeholder="Email" class="m10 email" required>
+                    </div>
+                    <div class="flex m20">
+                        <label>Donation Amount*</label>
+                        <input type="number" name="amount" placeholder="Amount" class="m10 amount" required>
+                    </div>
+                    <button type="submit" class="submit_donation m20">Submit Donation</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Thank You Popup -->
+   
+    <div id="popup" class="popup">
+        <h2>Thank you!</h2>
+        <p>Your donation has been successfully submitted. Thanks!</p>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact Info Section -->
+            <div class="footer-section footer-contact-section" id="contact-us">
+                <h3>CONTACT INFO</h3>
+                <div class="underline"></div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>माऊली निवास, टेमकर वाडी, शिरूर -नारायणगाव रोड,<br>टाकळी हाजी, ता -शिरूर, पुणे</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+91 7385169265</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>byvfofficial@gmail.com</p>
+                </div>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <div class="underline"></div>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#projects-2023-24">Projects</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#goals">Goals</a></li>
+                    <li><a href="contact-us.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+    
+             <!-- Slogan Section -->
+             <div class="slogan-section">
+                <h3>Support Our Cause</h3>
+                <div class="underline"></div> <!-- Added underline here -->
+                <p class="slogan-text">Make a difference<br>by donating to our foundation.</p>
+                <button class="donate-now-button" onclick="handleDonateClick()">Donate Now</button>
+            </div>
+    
+            <!-- Find Us (Map) Section -->
+            <div class="footer-section find-us">
+                <h3>Find Us</h3>
+                <div class="underline"></div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.8039326939115!2d73.83354717518766!3d18.356227182705823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc293c405f48767%3A0x5c557c3cd694cf2b!2z4KSu4KS-4KSK4KSy4KWAIOCkqOCkv-CkteCkvuCkuA!5e0!3m2!1sen!2sin!4v1726053619170!5m2!1sen!2sin"
+                    width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+
+           
+        </div>
+    
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <hr>
+            <p>&copy; 2024 Bharat Yuva Vikas Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+    
+     
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+
+    <script>
+       
+    // Function to toggle the menu visibility
+    document.getElementById('menu-icon').addEventListener('click', function() {
+        const menuList = document.getElementById('menu-list');
+        menuList.classList.toggle('active');
+    });
+
+    
+
+    // Handle the form submission
+    document.getElementById('popup').style.display = 'none';
+
+    // Handle the form submission
+    document.getElementById('donationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        fetch('/submit-donation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) { // Check if the response is successful
+                return response.json();
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+            document.getElementById('donationSection').classList.add('hidden');
+            openPopup(); // Show the popup with the thank you message
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting your donation. Please try again.'); // Optional error message
+        });
+    });
+
+    function openPopup() {
+        document.getElementById('popup').style.display = 'flex'; // Use flex to center the popup
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        location.reload(); // Refresh the page to reset the form
+    }
+</script>
+
+<script src="script.js"></script>
+
+        
+   
+     
+</body>
+</html>

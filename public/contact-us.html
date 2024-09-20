@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Yuva Vikas Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Popup styling */
+        .contact-popup-overlay {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .contact-popup {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #03671c;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1001;
+            text-align: center;
+        }
+
+        #contactuspopup {
+            background-color: #0e3001; 
+            color: #fff;
+        }
+
+        .btn-container-contact button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff6600; 
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-container-contact button:hover {
+            background-color: #ff6600; 
+        }
+
+        .orange-box {
+            background-color: rgba(229, 50, 10, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #contact-us-form {
+    margin: 40px 0; /* Adjust the values as needed */
+}
+
+        .contact-details {
+            flex: 1;
+            color: #ffffff;
+            padding: 20px;
+            font-size: 16px;
+            margin-left: 150px;
+            margin-top: 100px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .form-section {
+            flex: 1;
+            max-width: 500px;
+            margin-left: 20px;
+        }
+
+        .form-heading {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #888;
+        }
+
+        .contact-form button {
+            background-color: #0e3001;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #03671c;
+        }
+
+        @media (max-width: 768px) {
+            .orange-box {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-details,
+            .form-section {
+                max-width: 100%;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contact-info">
+            <span class="phone">📞 Phone: +91 7385169265</span>
+            <span class="email">✉️ Email: byvfofficial@gmail.com</span>
+        </div>
+        <div class="logo-section">
+            <img src="../Images/logo.png" alt="Logo" class="logo">
+            <p class="slogan">Building Brighter Future</p>
+            <h1 class="foundation-name">BHARAT YUVA VIKAS FOUNDATION</h1>
+        </div>
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="menu-icon" id="menu-icon">&#9776;</div>
+                <ul id="menu-list">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                        <ul class="dropdown-content">
+                            <li><a href="life-skill.html">Life Skill Program</a></li>
+                            <li><a href="health.html">Health Program</a></li>
+                            <li><a href="education.html">Education Program</a></li>
+                            <li><a href="life-skill.pdf">Life Skill Program Report</a></li>
+                            <li><a href="health.pdf">Health Program Report</a></li>
+                            <li><a href="education.pdf">Education Program Report</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#goals">Goals</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact-us-form">
+        <div class="orange-box">
+            <div class="contact-details">
+                <div class="contact-item"><i class="fas fa-phone"></i> +91 7385169265  </div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> byvfofficial@gmail.com
+
+                </div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra</div>
+            </div>
+            <div class="form-section">
+                <h2 class="form-heading">Get in Touch</h2>
+                <p class="form-slogan">Fill out the form below and we will get back to you.</p>
+                <form class="contact-form" id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-popup-overlay"></div>
+    <div id="contactuspopup" class="contact-popup">
+        <h2>Thank you for connecting with us!</h2>
+        <p>We will get back to you shortly!</p>
+        <div class="btn-container-contact">
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact Info Section -->
+            <div class="footer-section footer-contact-section" id="contact-us">
+                <h3>CONTACT INFO</h3>
+                <div class="underline"></div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>माऊली निवास, टेमकर वाडी, शिरूर -नारायणगाव रोड,<br>टाकळी हाजी, ता -शिरूर, पुणे</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+91 7385169265</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>byvfofficial@gmail.com</p>
+                </div>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <div class="underline"></div>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#projects-2023-24">Projects</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#goals">Goals</a></li>
+                    <li><a href="contact-us.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+    
+             <!-- Slogan Section -->
+             <div class="slogan-section">
+                <h3>Support Our Cause</h3>
+                <div class="underline"></div> <!-- Added underline here -->
+                <p class="slogan-text">Make a difference<br>by donating to our foundation.</p>
+                <button class="donate-now-button" onclick="handleDonateClick()">Donate Now</button>
+            </div>
+    
+            <!-- Find Us (Map) Section -->
+            <div class="footer-section find-us">
+                <h3>Find Us</h3>
+                <div class="underline"></div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.8039326939115!2d73.83354717518766!3d18.356227182705823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc293c405f48767%3A0x5c557c3cd694cf2b!2z4KSu4KS-4KSK4KSy4KWAIOCkqOCkv-CkteCkvuCkuA!5e0!3m2!1sen!2sin!4v1726053619170!5m2!1sen!2sin"
+                    width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+
+           
+        </div>
+    
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <hr>
+            <p>&copy; 2024 Bharat Yuva Vikas Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Assuming the form is submitted successfully
+            document.querySelector(".contact-popup-overlay").style.display = "block";
+            document.querySelector(".contact-popup").style.display = "block";
+        });
+
+        function closePopup() {
+            document.querySelector(".contact-popup-overlay").style.display = "none";
+            document.querySelector(".contact-popup").style.display = "none";
+            document.getElementById("contactForm").reset(); // Reset the form
+        }
+
+        document.getElementById("menu-icon").addEventListener("click", function () {
+            const menuList = document.getElementById("menu-list");
+            menuList.classList.toggle("show");
+        });
+    </script>
+
+<script src="script.js"></script>
+</body>
+
+</html>

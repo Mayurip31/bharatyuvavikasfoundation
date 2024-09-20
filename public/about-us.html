@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Yuva Vikas Foundation</title>
+    <style>
+        /* General Styling for Full Screen Layout */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            position: relative;
+        }
+
+        /* Top bar with phone and email */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E5320A;
+            color: #FFFFFF;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        .contact-info span {
+            margin: 0 10px;
+        }
+
+        /* Logo section */
+        .logo-section {
+            background-color: #FFFFFF;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .slogan {
+            color: #E5320A;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .foundation-name {
+            color: #E5320A;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Navigation bar styles */
+        .nav-container {
+            width: 100%;
+            background-color: #12431A;
+        }
+
+        .navbar {
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none; /* Hidden by default for mobile */
+            background-color: #12431A;
+            width: 100%;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .navbar ul.active {
+            display: flex; /* Show menu when active for mobile */
+        }
+
+        .navbar ul li {
+            margin: 5px 0;
+        }
+
+        .navbar ul li a {
+            color: #FFFFFF;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover, 
+        .navbar ul li a:active {
+            color: #E5320A;
+        }
+
+        /* Menu icon */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+            .contact-info {
+                font-size: 12px; /* Reduced font size for mobile */
+                padding: 5px; /* Reduced padding */
+            }
+
+            .contact-info span {
+                margin: 0 5px; /* Reduced margin between phone and email */
+            }
+
+            .navbar ul {
+                display: none;
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+                position: relative;
+                text-align: center;
+            }
+        }
+
+        /* Responsive styles for desktop */
+        @media (min-width: 769px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .navbar ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .navbar ul li {
+                margin: 0 10px;
+            }
+
+            .navbar ul li a {
+                font-size: 14px;
+            }
+        }
+
+        /* Full-screen container */
+        .about.container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #fff;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        /* Content Styling */
+        .content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            margin: 40px auto;
+            display: block;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2.5rem;
+            color: #E5320A;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Paragraph Styling */
+        .content p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 10px; /* Reduced spacing */
+            text-align: justify;
+            
+        }
+
+        /* Founder Heading and Name Styling */
+        h3 {
+            text-align: center;
+            color: #E5320A; /* Orange color */
+            margin: 20px 0 10px 0; /* Reduced top and bottom margins */
+        }
+
+        .content p:last-of-type {
+            text-align: center;
+            margin-bottom: 5px; /* Further reduced spacing before the founder heading */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content img {
+                width: 80%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content img {
+                width: 90%;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .content p {
+                font-size: 0.9rem;
+                text-align: center;
+                margin: 0 20px; 
+            
+            }
+
+        }
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #E5320A; /* Orange background */
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.footer-section p a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section p a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid white;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+iframe {
+    border: none;
+    
+    max-width: 600px; /* Limits maximum width for larger screens */
+    height: 200px; /* Sets fixed height for iframe */
+    border-radius: 10px; /* Adds rounded corners to iframe */
+    object-fit: cover; /* Ensures the iframe maintains a rectangular shape */
+}
+
+/* Increase Font Size of Navigation Links */
+.footer-section.middle-nav ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em; /* Increase font size for navigation */
+}
+
+.footer-section.middle-nav li {
+    margin: 10px 0; /* Adjust margin as needed */
+}
+
+.footer-section.middle-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section.middle-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    iframe {
+        height: 250px; /* Adjusts height for smaller screens */
+    }
+
+    /* Ensure the navigation links adjust for smaller screens */
+    .footer-section.middle-nav ul {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Top bar with phone number and email -->
+        <div class="contact-info">
+            <span class="phone">📞 +91 99700 75033</span>
+            <span class="email">✉️ contact@yuva.org</span>
+        </div>
+
+        <!-- Logo and foundation name -->
+        <div class="logo-section">
+            <img src="logo.png" alt="Logo" class="logo">
+            <p class="slogan">Building Brighter Future</p>
+            <h1 class="foundation-name">BHARAT YUVA VIKAS FOUNDATION</h1>
+        </div>
+
+        <!-- Navigation bar container -->
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- Hamburger icon for mobile -->
+                </div>
+                <ul id="menu-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects-2023-24">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="about container">
+            <!-- Unified Content -->
+            <div class="content">
+                <h2 class="section-title">About Yuva Vikas Foundation</h2>
+                <p>Yuva Vikas Foundation is dedicated to empowering youth by addressing the critical areas that shape their future—education, life skills, health, and sports. Established in 2023, Founded with the vision to support and uplift young individuals, our programs focus on equipping them with the tools and knowledge necessary to lead productive and fulfilling lives.</p>
+
+                <p>We are committed to providing access to quality education, life skills training, and health awareness programs that foster personal growth and community involvement. Through our initiatives, we aim to create an environment where young people can thrive—both mentally and physically. Our sports training, career guidance, and mental health workshops ensure holistic development, while our scholarship and financial aid programs help remove financial barriers for those striving to achieve their dreams.</p>
+
+                <p>The rapid growth and social transformation seen in India over the past few decades opened up vast opportunities, yet also exposed stark inequalities. Understanding that sustainable development cannot be achieved by government efforts alone, we stepped forward to work at the grassroots level, contributing to the development of resilient, skilled, and self-sufficient individuals.</p>
+
+                <img src="img1.jpeg" alt="Yuva Vikas Foundation Image 1">
+
+                <p>At Yuva Vikas Foundation, we believe that education and well-being are fundamental to creating a brighter future. With this mindset, we actively collaborate with educational institutions, healthcare providers, and local communities to implement impactful programs. By doing so, we ensure that our resources and expertise reach those who need them most, thereby driving positive change and building a better tomorrow.</p>
+
+                <h3>Founder</h3>
+                <p>Mr. Machhintra Popat Gawade</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <footer>
+            <div class="footer-container">
+              <!-- Contact Info Section -->
+              <div class="footer-section">
+                <h3>CONTACT INFO</h3>
+                <p><strong>ADDRESS</strong></p>
+                <p>माऊली निवास, टेमकर वाडी, शिरूर -नारायणगाव रोड,<br>टाकळी हाजी, ता -शिरूर, पुणे</p>
+                <p><strong>PHONE</strong></p>
+                <p>+91 +91 99700 75033</p>
+                <p><strong>EMAIL</strong></p>
+                <p><a href="bharatyuvafoundation@gmail.com">bharatyuvafoundation@gmail.com</a></p>
+              </div>
+          
+              <!-- Navigation Section -->
+              <div class="footer-section middle-nav">
+                <h3>Bharat Yuva Vikas Foundation</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects-2023-24">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+              </div>
+          
+             
+          
+              <!-- Google Maps Section -->
+              <div class="footer-section map-container">
+                <h3>FIND US</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.8039326939115!2d73.83354717518766!3d18.356227182705823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc293c405f48767%3A0x5c557c3cd694cf2b!2z4KSu4KS-4KSK4KSy4KWAIOCkqOCkv-CkteCkvuCkuA!5e0!3m2!1sen!2sin!4v1726053619170!5m2!1sen!2sin"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            </div>
+          
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+              <p>&copy; 2022 bharat yuva foundation All rights reserved.</p>
+            </div>
+          </footer>
+          
+    
+     
+
+    <script>
+        // JavaScript for responsive menu toggle
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var menuList = document.getElementById('menu-list');
+            if (menuList.classList.contains('active')) {
+                menuList.classList.remove('active');
+            } else {
+                menuList.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

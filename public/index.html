@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Yuva Vikas Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js" integrity="sha512-f0VlzJbcEB6KiW8ZVtL+5HWPDyW1+nJEjguZ5IVnSQkvZbwBt2RfCBY0CBO1PsMAqxxrG4Di6TfsCPP3ZRwKpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Top bar with phone number and email -->
+        <div class="contact-info">
+            <span class="phone">📞 Phone: +91 7385169265</span>
+            <span class="email">✉️ Email: byvfofficial@gmail.com</span>
+        </div>
+    
+        <!-- Logo and foundation name -->
+        <div class="logo-section">
+            <img src="../Images/logo.png" alt="Logo" class="logo">
+            <p class="slogan">Building Brighter Future</p>
+            <h1 class="foundation-name">BHARAT YUVA VIKAS FOUNDATION</h1>
+        </div>
+    
+        <!-- Navigation bar container -->
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- Hamburger icon for mobile -->
+                </div>
+                <ul id="menu-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+    
+                    <!-- Projects Dropdown Menu -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                        <ul class="dropdown-content">
+                            <!-- HTML Links First -->
+                            <li><a href="life-skill.html">Life Skill Program</a></li>
+                            <li><a href="health.html">Health Program</a></li>
+                            <li><a href="education.html">Education Program</a></li>
+    
+                            <!-- PDF Reports Next -->
+                            <li><a href="../report/life-skill.pdf" target="_blank" download>Life Skill Program Report</a></li>
+                            <li><a href="health.pdf" target="_blank" download>Health Program Report</a></li>
+                            <li><a href="education.pdf" target="_blank" download>Education Program Report</a></li>
+                        </ul>
+                    </li>
+    
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+     
+    <!-- Home section -->
+    <section class="home" id="home">
+        <div class="overlay"></div>
+        <div class="home-content">
+            <h1>Let’s join so that these smiles are Broad & Bright!!!</h1>
+            <p>Donate Now and be a part of the change !!</p>
+            <button class="donate-now-button" onclick="handleDonateClick()">Donate Now</button>
+        </div>
+    </section>
+
+
+    <!-- Projects 2023-24 Section -->
+    <section id="projects-2023-24" class="projects-section">
+        <h2>Our Projects <span class="year-highlight">2023-24</span></h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="../Images/life-skill-final.jpg" alt="Life Skills Program">
+                <div class="project-content">
+                    <h3>Life Skills Programs</h3>
+                    <p class="project-desc">Shaping Tomorrow’s Leaders Today through workshops and community engagement programs.</p>
+                    <!-- Redirect link for Life Skills Program -->
+                    <a href="life-skill.html"  class="read-more">Read More</a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="../Images/health-final.jpeg" alt="Health Program">
+                <div class="project-content">
+                    <h3>Health Program</h3>
+                    <p class="project-desc">Nurturing Healthy Bodies and Strong Minds through health education and medical support.</p>
+                    <!-- Redirect link for Health Program -->
+                    <a href="health.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="../Images/edu.jpeg" alt="Education Program">
+                <div class="project-content">
+                    <h3>Education Program</h3>
+                    <p class="project-desc">Empowering Future Generations by bringing quality education to marginalized children.</p>
+                    <!-- Redirect link for Education Program -->
+                    <a href="education.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+<!-- Upcoming Projects Section -->
+<div class="main-container">
+    <h1 class="upcoming-heading">Upcoming Projects</h1>
+
+    <section class="upcoming-section">
+        <div class="upcoming-image-wrapper">
+            <img src="../Images/upcoming.jpeg" alt="Upcoming Projects Image" class="upcoming-image">
+        </div>
+        <div class="upcoming-details">
+            <h2>Juvenile Custody Rehabilitation Goals</h2>
+            <p>Our goal in juvenile custody rehabilitation is to transform the lives of juveniles in conflict with the law by addressing the root causes of their behavior. We aim to:</p>
+            <ul class="project-list">
+                <li>Provide value-based education and instill core ethical principles to guide them towards a positive future.</li>
+                <li>Raise mental health awareness and offer emotional and psychological support through counseling and specialized programs.</li>
+                <li>Create awareness about the dangers of drug addiction and offer preventive strategies and rehabilitation support.</li>
+                <li>Offer career guidance and skills training to help juveniles develop practical skills in sports, agriculture, and other areas, ensuring they are prepared for a productive life post-custody.</li>
+                <li>Empower them with social, emotional, and life skills to help them reintegrate into society as responsible, empowered individuals.</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+
+<!-- mission vision-->
+
+<div class="mission-vision-container">
+    <!-- Mission Card -->
+    <div class="card">
+        <div class="icon">
+            <i class="fas fa-book"></i>
+        </div>
+        <h2 class="title mission-h2">MISSION</h2>
+        <hr class="mission-vision-underline">
+        <p class="description mission-p">
+            Our mission is to rehabilitate juveniles in custody by providing them with holistic support that includes value-based education, mental health awareness, career guidance, and skill development. We strive to break the cycle of criminal behavior by focusing on emotional growth, career readiness, and personal empowerment, enabling these individuals to reintegrate successfully into society and lead fulfilling lives.
+        </p>
+    </div>
+
+    <!-- Vision Card -->
+    <div class="card">
+        <div class="icon">
+            <i class="fas fa-globe"></i>
+        </div>
+        <h2 class="title vision-h2">VISION</h2>
+        <hr class="mission-vision-underline">
+        <p class="description vision-p">
+            We envision a society where juveniles in custody are given a second chance to rebuild their lives through proper guidance, education, and emotional support. Our goal is to create a future where every juvenile emerges from custody as a confident, skilled, and responsible member of society, contributing positively to their community and leading a life free from crime and addiction.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+<!--gols--->
+<section class="goals-section" id="goals">
+    <div class="goals-container">
+        <h1 class="section-title">Our Goals</h1>
+        <div class="goals-grid">
+            <!-- Youth Development and Juvenile Rehabilitation -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/youth1-removebg-preview.png" alt="Youth Development Icon">
+                </div>
+                <h3 class="goal-title">Youth Development and Juvenile Rehabilitation</h3>
+                <p class="goal-text">Comprehensive programs for the rehabilitation and reintegration of juveniles.</p>
+                <div class="goal-details">
+                    <p>Yuva Vikas Foundation is dedicated to transforming the lives of juveniles in custody by providing extensive rehabilitation programs. These initiatives aim to equip them with essential life skills, emotional intelligence, and the tools necessary for reintegration into society. Our approach includes tailored EQ and IQ assessments to understand their psychological needs, followed by personalized counseling and mentorship.        </div>
+                </div>
+
+            <!-- Women Empowerment -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/womem-empowerment-removebg-preview.png" alt="Women Empowerment Icon">
+                </div>
+                <h3 class="goal-title">Women Empowerment</h3>
+                <p class="goal-text">Building a future where women lead independent, empowered lives.</p>
+                <div class="goal-details">
+                    <p>Empowering young women is at the heart of our mission. We aim to provide women with the necessary skills, knowledge, and opportunities to help them lead independent and fulfilling lives. Our programs will focus on leadership development, financial literacy, and entrepreneurship. By providing specialized guidance, we will help young women break societal limitations and become contributors to communities.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Mental Health Awareness -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/Mental-health.jpg" alt="Mental Health Awareness Icon">
+                </div>
+                <h3 class="goal-title">Mental Health Awareness</h3>
+                <p class="goal-text">Spreading awareness and promoting mental well-being in the community.</p>
+                <div class="goal-details">
+                    <p>Mental health is a critical aspect of overall well-being, and Yuva Vikas Foundation prioritizes raising awareness about mental health issues. We conduct workshops, campaigns, and counseling sessions aimed at addressing common mental health challenges such as depression, anxiety, and trauma. By partnering with mental health professionals, we offer both preventive and remedial support to foster emotions.</p>
+                </div>
+            </div>
+
+            <!-- Awareness Against Drug Addiction -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/No-Drug.jpg" alt="Awareness Against Drug Addiction Icon">
+                </div>
+                <h3 class="goal-title">Awareness Against Drug Addiction</h3>
+                <p class="goal-text">Combatting substance abuse through education and support services.</p>
+                <div class="goal-details">
+                    <p>Drug addiction remains a significant threat to youth development, and at Yuva Vikas Foundation, we are committed to tackling this issue head-on. Our campaigns focus on preventive education to raise awareness about the dangers of substance abuse, equipping youth with the knowledge to make informed decisions. We also offer counseling services to those affected by addiction, guiding them through the recovery.</p>       
+                  </div>
+            </div>
+
+            <!-- Educational and Career Development Support -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/carrer.png" alt="Educational and Career Development Icon">
+                </div>
+                <h3 class="goal-title">Educational and Career Development Support</h3>
+                <p class="goal-text">Opening doors to academic success and meaningful careers for the underprivileged.</p>
+                <div class="goal-details">
+                    <p>Education is one of the most powerful tools for breaking the cycle of poverty, and Yuva Vikas Foundation is dedicated to providing underprivileged youth with access to academic and career development resources. We offer affordable access to study materials for competitive exams, mentorship programs, and hands-on training in fields such as sports and agriculture.</p>
+                </div>
+            </div>
+
+            <!-- Special Guidance and Skill Training in Sports -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/sports.jpg" alt="Special Guidance in Sports Icon">
+                </div>
+                <h3 class="goal-title">Special Guidance and Skill Training in Sports</h3>
+                <p class="goal-text">Developing discipline, teamwork, and leadership through sports.</p>
+                <div class="goal-details">
+                    <p>At Yuva Vikas Foundation, we recognize the vital role that sports play in the development of youth, fostering discipline, teamwork, and leadership skills. We offer specialized guidance and training for aspiring athletes, providing them with the resources and coaching needed to hone their skills and excel in their chosen sports. Our programs focus not only on physical development but also on nurturing mental resilience, confidence.</p>
+                </div>
+            </div>
+
+            <!-- Specialized Aid and Social Training Programs in Agriculture -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/agri-removebg-preview.png" alt="Agriculture Training Icon">
+                </div>
+                <h3 class="goal-title">Specialized Aid and Social Training Programs in Agriculture</h3>
+                <p class="goal-text">Empowering rural youth with modern farming techniques for sustainable growth.</p>
+                <div class="goal-details">
+                    <p>Agriculture is the backbone of rural communities, and Yuva Vikas Foundation is committed to empowering rural youth through specialized training in modern agricultural practices. Our programs focus on teaching sustainable farming techniques, crop production methods, and the latest advancements in agricultural technology. By providing youth with hands-on experience and knowledge in agriculture.</p>
+                </div>
+            </div>
+
+            <!-- Community and Social Interventions -->
+            <div class="goal">
+                <div class="goal-icon">
+                    <img src="../Images/socia-removebg-preview.png" alt="Community and Social Interventions Icon">
+                </div>
+                <h3 class="goal-title">Community and Social Interventions</h3>
+                <p class="goal-text">Fostering personal growth through community engagement and social support.</p>
+                <div class="goal-details">
+                    <p>Yuva Vikas Foundation believes that strong communities foster strong individuals. Through our community-based interventions, we aim to address issues such as family conflicts, social pressures, and financial challenges that affect youth development. Our initiatives include counseling, workshops, and support groups that provide young people with the tools and guidance to navigate personal and social difficulties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!---->
+ <!-- About Section -->
+ <section id="about">
+    <div class="about container">
+        <!-- Left Column -->
+        <div class="col-left">
+            <h2>About Bharat Yuva Vikas Foundation</h2>
+            <p>Established in 2023 by Mr. Machhintra Popat Gawade, the Bharat Yuva Vikas Foundation is committed to empowering youth by focusing on education, life skills, health, and sports. We aim to provide young individuals with the tools needed to lead productive, fulfilling lives.</p>
+            <p>Our programs include sports training, career guidance, mental health workshops, and scholarships, all designed to ensure holistic development. By addressing both personal growth and community involvement, we help remove barriers and create opportunities for young people to thrive.</p>
+            <p>At Bharat Yuva Vikas Foundation, we believe that nurturing confident, self-sufficient, and socially responsible youth is key to building stronger communities. When youth grow, communities thrive.</p>
+        </div>
+
+        <!-- Right Column - Image or Awards Section -->
+        <div class="col-right">
+            
+            <img src="../Images/img1.jpeg" alt="Award Image" />
+            
+        </div>
+    </div>
+</section>
+
+
+
+ <!-- Contact Us Section -->
+    <section id="contact-us">
+        <div class="orange-box">
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <div class="contact-item"><i class="fas fa-phone"></i> +91 7385169265</div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> byvfofficial@gmail.com  </div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra</div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="form-section">
+                <h2 class="form-heading">Get in Touch</h2>
+                <p class="form-slogan">Fill out the form below and we will get back to you.</p>
+                <form class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+     
+    
+      <!-- Footer Section -->
+      <footer>
+        <div class="footer-container">
+            <!-- Contact Info Section -->
+            <div class="footer-section footer-contact-section" id="contact-us">
+                <h3>CONTACT INFO</h3>
+                <div class="underline"></div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>माऊली निवास, टेमकर वाडी, शिरूर -नारायणगाव रोड,<br>टाकळी हाजी, ता -शिरूर, पुणे</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+91 7385169265</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>byvfofficial@gmail.com</p>
+                </div>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <div class="underline"></div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects-2023-24">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="contact-us.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+    
+             <!-- Slogan Section -->
+             <div class="slogan-section">
+                <h3>Support Our Cause</h3>
+                <div class="underline"></div> <!-- Added underline here -->
+                <p class="slogan-text">Make a difference<br>by donating to our foundation.</p>
+                <button class="donate-now-button" onclick="handleDonateClick()">Donate Now</button>            </div>
+    
+            <!-- Find Us (Map) Section -->
+            <div class="footer-section find-us">
+                <h3>Find Us</h3>
+                <div class="underline"></div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.8039326939115!2d73.83354717518766!3d18.356227182705823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc293c405f48767%3A0x5c557c3cd694cf2b!2z4KSu4KS-4KSK4KSy4KWAIOCkqOCkv-CkteCkvuCkuA!5e0!3m2!1sen!2sin!4v1726053619170!5m2!1sen!2sin"
+                    width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+
+           
+        </div>
+    
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <hr>
+            <p>&copy; 2024 Bharat Yuva Vikas Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+    
+     
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
